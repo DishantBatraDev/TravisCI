@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t dishant_first_image .
-  - docker tag simple-node dishantbatra92/dishant_first_image:latest
+  - docker tag dishant_first_image dishantbatra92/dishant_first_image:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
