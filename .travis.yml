@@ -12,10 +12,11 @@ install:
 # Scripts to be run such as tests
 before_script:
   - echo "no tests"
+  - echo "$FAVORITE_FOOD"
 
 script:
   - docker --version # print the version for logging
-  - docker build -t dishant_first_image --build-arg FAVORITE_FOOD="Pizza" .
+  - docker build -t dishant_first_image --build-arg FAVORITE_FOOD=$FAVORITE_FOOD .
   - docker tag dishant_first_image dishantbatra92/dishant_first_image:latest
 
 after_success:
