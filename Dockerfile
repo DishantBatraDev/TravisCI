@@ -1,5 +1,7 @@
 # We reduced many lines of code to set up NodeJS by abstracting all of it into a base image
 FROM dishantbatra92/base-image:latest
+ARG FAVORITE_FOOD=
+ENV FAVORITE_FOOD=$FAVORITE_FOOD
 
 # Create app directory
 WORKDIR /usr/src/app
